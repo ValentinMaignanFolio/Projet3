@@ -1,0 +1,35 @@
+
+
+section h2{
+    color:$primary-color;
+    font-size: $big-font;
+}
+
+section button{
+    color:$primary-color;
+}
+
+/* INDENTER LE CODE --> NESTING */
+
+.introduction{
+    min-height: 100vh;
+    @include flex();
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    h2{
+        font-size: $big-font;
+    }
+    button{
+        border:none;
+        background:$primary-color;
+        padding:1rem 3rem;
+        transition: all 1s ease;
+        color:white;
+        &:hover{
+            background:rgb(92, 164, 189);
+        }
+    }
+}

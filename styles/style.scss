@@ -1,0 +1,14 @@
+@import 'global';
+@import 'header';
+@import 'intro';
+@import 'footer';
+
+/* CREATION MIXINS */
+
+@mixin flex{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+

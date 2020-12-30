@@ -1,0 +1,32 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html{
+    font-size:62.5%;
+}
+
+
+/* CREATION DE VARIABLES */
+
+$primary-color : #331563;
+$big-font: 4rem;
+
+
+/* CREATION MIXINS */
+
+@mixin flex{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* MIXINS AVEC DES ARGUMENTS */
+
+@mixin center($justify, $direction){
+    display:flex;
+    justify-content:$justify;
+    align-items:center;
+    flex-direction:$direction;
+}
