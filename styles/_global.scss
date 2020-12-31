@@ -7,26 +7,18 @@ html{
     font-size:62.5%;
 }
 
-
-/* CREATION DE VARIABLES */
-
-$primary-color : #331563;
-$big-font: 4rem;
-
-
-/* CREATION MIXINS */
-
-@mixin flex{
-    display:flex;
-    justify-content: center;
-    align-items: center;
+h1{
+    font-size: $header1;
 }
 
-/* MIXINS AVEC DES ARGUMENTS */
+h2{
+    font-size: $header2;
+}
 
-@mixin center($justify, $direction){
-    display:flex;
-    justify-content:$justify;
-    align-items:center;
-    flex-direction:$direction;
+h3{
+    font-size: $header3;
+}
+
+p{
+    font-size:$text;
 }

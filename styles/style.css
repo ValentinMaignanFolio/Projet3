@@ -9,21 +9,41 @@ html {
   font-size: 62.5%;
 }
 
-/* CREATION DE VARIABLES */
-/* CREATION MIXINS */
-/* MIXINS AVEC DES ARGUMENTS */
-section h2 {
-  color: #331563;
-  font-size: 4rem;
+h1 {
+  font-size: 2.4rem;
 }
 
-section button {
-  color: #331563;
+h2 {
+  font-size: 1.8rem;
 }
 
-/* INDENTER LE CODE --> NESTING */
-.introduction {
-  min-height: 100vh;
+h3 {
+  font-size: 1.4rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+.main-head {
+  min-height: 60vh;
+}
+
+.main-head .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 3rem;
+  -webkit-box-shadow: 0px 3px 3px 2px #ada8a8;
+          box-shadow: 0px 3px 3px 2px #ada8a8;
+  z-index: 1;
+  position: relative;
+}
+
+.main-head .localisation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,49 +53,28 @@ section button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  align-items: center;
+  background: #eeeaea;
+  padding: 3rem 0rem;
 }
 
-.introduction h2 {
-  font-size: 4rem;
+.main-head .localisation img {
+  height: 3rem;
+  margin-right: 2rem;
 }
 
-.introduction button {
-  border: none;
-  background: #331563;
-  padding: 1rem 3rem;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
-  color: white;
+.main-head .localisation p {
+  font-size: 2rem;
 }
 
-.introduction button:hover {
-  background: #5ca4bd;
+@media screen and (max-width: 500px) {
+  .main-head .logo {
+    padding: 2rem;
+  }
+  .main-head .logo img {
+    height: 3.5rem;
+  }
+  .main-head .localisation {
+    padding: 2rem 0rem;
+  }
 }
-
-footer {
-  min-height: 10vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-/* CREATION MIXINS */
 /*# sourceMappingURL=style.css.map */
