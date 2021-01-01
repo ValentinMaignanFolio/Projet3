@@ -1,4 +1,4 @@
-
+/*HEADER*/
 .main-head{
     position:relative;
 }
@@ -10,7 +10,7 @@
     top:30%;
     left:5%;
 }
-
+/*PRESENTATION RESTAURANT */
 .restaurant{
     display: flex;
     padding:0;
@@ -23,6 +23,7 @@
     object-fit: cover;
 }
 
+/**MENU**/ 
 .menu{
     display: flex;
     justify-content: center;
@@ -66,9 +67,23 @@
     }
 }
 
+/*ENTREES - PLATS -DESSERTS*/
 .main-courses, .starters, .deserts{
     margin-bottom:4rem;
     width:100%;
+    opacity: 1;
+}
+
+.starters{
+    animation:apparition 1s ease-in-out;
+}
+
+.main-courses{
+    animation:apparition 1s ease-in-out 0.2s;
+}
+
+.deserts{
+    animation:apparition 1s ease-in-out 0.3s;
 }
 
 .selection{
@@ -76,16 +91,23 @@
     border-radius:15px;
     padding:0.8rem 1rem;
     box-shadow: 2px 2px 5px 0.2px rgb(173, 168, 168);
+    overflow: hidden;
+    position: relative;
     h4{
+        width: 100%;
         font-size:1.6rem;
         padding-top:0.6rem;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
     p{
         font-size:1.4rem;
     }
     .short{
-        max-width: 80%;
+        width: 80%;
         color:black;
+        transition: all .3s .0s;
         p{
             text-overflow: ellipsis;
             white-space: nowrap;
@@ -93,13 +115,60 @@
         }
     }
     .price{
-        padding-left:2rem;
+        display: flex;
+        text-align:left;
+        width:20%;
+        padding-left:0.5rem;
+        transition: all .4s;
     }
     .description{
+        width:100%;
         margin:0.6rem 0rem;
         display: flex;
         justify-content: space-between;
     }
+}
+/* EFFET APPARITION BOUTTON VALIDATE*/
+.selection .validate{
+    display: flex;
+    width:7rem;
+    height: 100%;
+    background-color: $third-color;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    right:-8rem;
+    top:0rem;
+    transition: all .4s;
+}
+
+.validate img{
+    width:50%;
+    height:50%;
+    color:white;  
+}
+
+.selection:hover{
+    .validate{
+        position:absolute;
+        right:0rem;
+        top:0rem;
+        animation:left-right 0.5s ease;
+    }
+    .validate img{
+        animation: rotate 0.8s ease; 
+    }
+    .short{
+        width: 60%;
+    }
+    h4{
+        width: 70%;
+
+    }
+    .price{
+        width:40%;
+    }
+    
 }
 
 .button{
@@ -117,6 +186,48 @@ button{
     box-shadow: 2px 3px 3px rgb(173, 168, 168);
     text-align:center;
 }
+
+/* KEYFRAMES */
+
+@keyframes rotate{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes left-right{
+    from{
+        transform: translateX(120%);
+    }
+    to{
+        transform:translateX(0%);
+    }
+}
+
+@keyframes left-right-price{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform:translateX(-180%);
+    }
+}
+@keyframes apparition{
+    0%{
+        opacity:0%;
+        transform:translateY(40px);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateY(0px);
+    }
+}
+
+/*MEDIA QUERIES*/
+
 @media screen and (min-width: 500px){
     .menu-head{
         display: flex;
@@ -167,6 +278,21 @@ button{
     .main-courses, .starters, .deserts{
         margin:4rem;
         width:30%;
+    }
+    .selection:hover{
+        .short{
+            width: 70%;
+        }
+        .price{
+            width:32%;
+        } 
+    }
+    .main-courses{
+        animation:apparition 1s ease-in-out;
+    }
+    
+    .deserts{
+        animation:apparition 1s ease-in-out 1s;
     }
 }
 

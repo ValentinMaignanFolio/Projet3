@@ -142,9 +142,20 @@
         right:5%;
         bottom:9%;
     }
+    .icon:hover{
+        animation:heart 2s ease;
+    }
 }
 
-
+@keyframes heart{
+    0%{
+        background-color: white;
+    }
+    
+    100%{
+        background:linear-gradient(white,$primary-color);
+    }
+}
 
 
 @media screen and(min-width:660px){

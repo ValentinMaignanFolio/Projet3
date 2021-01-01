@@ -312,6 +312,31 @@ p {
   bottom: 9%;
 }
 
+.choix .heart-icon .icon:hover {
+  -webkit-animation: heart 2s ease;
+          animation: heart 2s ease;
+}
+
+@-webkit-keyframes heart {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(#9356DC));
+    background: linear-gradient(white, #9356DC);
+  }
+}
+
+@keyframes heart {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(#9356DC));
+    background: linear-gradient(white, #9356DC);
+  }
+}
+
 @media screen and (min-width: 660px) {
   .fonctionnement {
     width: 100%;
@@ -555,6 +580,7 @@ p {
   }
 }
 
+/*HEADER*/
 .main-head {
   position: relative;
 }
@@ -567,6 +593,7 @@ p {
   left: 5%;
 }
 
+/*PRESENTATION RESTAURANT */
 .restaurant {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -582,6 +609,7 @@ p {
      object-fit: cover;
 }
 
+/**MENU**/
 .menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -637,9 +665,26 @@ p {
   right: 2rem;
 }
 
+/*ENTREES - PLATS -DESSERTS*/
 .main-courses, .starters, .deserts {
   margin-bottom: 4rem;
   width: 100%;
+  opacity: 1;
+}
+
+.starters {
+  -webkit-animation: apparition 1s ease-in-out;
+          animation: apparition 1s ease-in-out;
+}
+
+.main-courses {
+  -webkit-animation: apparition 1s ease-in-out 0.2s;
+          animation: apparition 1s ease-in-out 0.2s;
+}
+
+.deserts {
+  -webkit-animation: apparition 1s ease-in-out 0.3s;
+          animation: apparition 1s ease-in-out 0.3s;
 }
 
 .selection {
@@ -648,11 +693,17 @@ p {
   padding: 0.8rem 1rem;
   -webkit-box-shadow: 2px 2px 5px 0.2px #ada8a8;
           box-shadow: 2px 2px 5px 0.2px #ada8a8;
+  overflow: hidden;
+  position: relative;
 }
 
 .selection h4 {
+  width: 100%;
   font-size: 1.6rem;
   padding-top: 0.6rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .selection p {
@@ -660,8 +711,10 @@ p {
 }
 
 .selection .short {
-  max-width: 80%;
+  width: 80%;
   color: black;
+  -webkit-transition: all .3s .0s;
+  transition: all .3s .0s;
 }
 
 .selection .short p {
@@ -671,10 +724,18 @@ p {
 }
 
 .selection .price {
-  padding-left: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  width: 20%;
+  padding-left: 0.5rem;
+  -webkit-transition: all .4s;
+  transition: all .4s;
 }
 
 .selection .description {
+  width: 100%;
   margin: 0.6rem 0rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -682,6 +743,58 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+/* EFFET APPARITION BOUTTON VALIDATE*/
+.selection .validate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 7rem;
+  height: 100%;
+  background-color: #99E2D0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: -8rem;
+  top: 0rem;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.validate img {
+  width: 50%;
+  height: 50%;
+  color: white;
+}
+
+.selection:hover .validate {
+  position: absolute;
+  right: 0rem;
+  top: 0rem;
+  -webkit-animation: left-right 0.5s ease;
+          animation: left-right 0.5s ease;
+}
+
+.selection:hover .validate img {
+  -webkit-animation: rotate 0.8s ease;
+          animation: rotate 0.8s ease;
+}
+
+.selection:hover .short {
+  width: 60%;
+}
+
+.selection:hover h4 {
+  width: 70%;
+}
+
+.selection:hover .price {
+  width: 40%;
 }
 
 .button {
@@ -710,6 +823,99 @@ button {
   text-align: center;
 }
 
+/* KEYFRAMES */
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+@keyframes rotate {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+@-webkit-keyframes left-right {
+  from {
+    -webkit-transform: translateX(120%);
+            transform: translateX(120%);
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes left-right {
+  from {
+    -webkit-transform: translateX(120%);
+            transform: translateX(120%);
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes left-right-price {
+  from {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  to {
+    -webkit-transform: translateX(-180%);
+            transform: translateX(-180%);
+  }
+}
+
+@keyframes left-right-price {
+  from {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  to {
+    -webkit-transform: translateX(-180%);
+            transform: translateX(-180%);
+  }
+}
+
+@-webkit-keyframes apparition {
+  0% {
+    opacity: 0%;
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+  100% {
+    opacity: 100%;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes apparition {
+  0% {
+    opacity: 0%;
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+  100% {
+    opacity: 100%;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+/*MEDIA QUERIES*/
 @media screen and (min-width: 500px) {
   .menu-head {
     display: -webkit-box;
@@ -776,6 +982,20 @@ button {
   .main-courses, .starters, .deserts {
     margin: 4rem;
     width: 30%;
+  }
+  .selection:hover .short {
+    width: 70%;
+  }
+  .selection:hover .price {
+    width: 32%;
+  }
+  .main-courses {
+    -webkit-animation: apparition 1s ease-in-out;
+            animation: apparition 1s ease-in-out;
+  }
+  .deserts {
+    -webkit-animation: apparition 1s ease-in-out 1s;
+            animation: apparition 1s ease-in-out 1s;
   }
 }
 /*# sourceMappingURL=style.css.map */
