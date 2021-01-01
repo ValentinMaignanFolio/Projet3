@@ -7,7 +7,7 @@ $header2: 2.4rem;
 $header3: 1.2rem;
 $header4: 1.4rem;
 $text: 1.5rem;
-
+$special: 'Shrikhand', cursive;
 
 @mixin flex{
     display:flex;
@@ -27,6 +27,7 @@ $text: 1.5rem;
 @import 'header';
 @import 'home';
 @import 'footer';
+@import 'restaurant1';
 
 
 
