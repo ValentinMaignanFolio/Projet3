@@ -3,9 +3,10 @@ $primary-color : #9356DC;
 $secondary-color: #FF79DA;
 $third-color: #99E2D0;
 $header1: 2.4rem;
-$header2: 1.8rem;
-$header3: 1.4rem;
-$text: 1.2rem;
+$header2: 2.4rem;
+$header3: 1.2rem;
+$header4: 1.4rem;
+$text: 1.5rem;
 
 
 @mixin flex{
@@ -15,7 +16,7 @@ $text: 1.2rem;
 }
 
 
-@mixin center($justify, $direction){
+@mixin position($justify, $direction){
     display:flex;
     justify-content:$justify;
     align-items:center;
@@ -24,6 +25,8 @@ $text: 1.2rem;
 
 @import 'global';
 @import 'header';
+@import 'home';
+@import 'footer';
 
 
 

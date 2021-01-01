@@ -11,22 +11,31 @@ html {
 
 h1 {
   font-size: 2.4rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-size: 2.4rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
 }
 
 h3 {
+  font-size: 1.2rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+h4 {
   font-size: 1.4rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
 }
 
 p {
-  font-size: 1.2rem;
-}
-
-.main-head {
-  min-height: 60vh;
+  font-size: 1.5rem;
+  font-family: 'Roboto', sans-serif;
 }
 
 .main-head .logo {
@@ -53,7 +62,7 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #eeeaea;
+  background: #c5c2c2;
   padding: 3rem 0rem;
 }
 
@@ -74,7 +83,470 @@ p {
     height: 3.5rem;
   }
   .main-head .localisation {
+    padding: 1.5rem 0rem;
+  }
+}
+
+.explorer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #f5efef;
+  padding: 5rem 2rem;
+}
+
+.explorer h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+.explorer p {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+.explorer button {
+  padding: 1.5rem 3rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  -webkit-box-shadow: 2px 3px 3px #ada8a8;
+          box-shadow: 2px 3px 3px #ada8a8;
+}
+
+.fonctionnement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 3rem 0rem;
+  min-width: 300px;
+  font-weight: 500;
+}
+
+.fonctionnement h2 {
+  display: block;
+  width: 100%;
+  padding-left: 10%;
+  margin-bottom: 2rem;
+}
+
+.fonctionnement .action {
+  width: 90%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 2rem 2rem;
+  -webkit-box-shadow: 2px 2px 8px 1px #ada8a8;
+          box-shadow: 2px 2px 8px 1px #ada8a8;
+  border-radius: 20px;
+  margin: 1rem;
+  position: relative;
+}
+
+.action img {
+  height: 2rem;
+  width: 2rem;
+  margin: 0rem 2rem;
+}
+
+.action .chiffre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #9356DC;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 100%;
+  position: absolute;
+  left: -1rem;
+}
+
+.action .chiffre p {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.action:hover {
+  background-color: #e4d3f8;
+}
+
+.restaurant {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #f5efef;
+  padding: 3rem 0rem;
+}
+
+.restaurant .choix {
+  width: 90%;
+  padding-bottom: 1.2rem;
+  margin: auto;
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  -webkit-box-shadow: 2px 2px 8px 0.2px #ada8a8;
+          box-shadow: 2px 2px 8px 0.2px #ada8a8;
+}
+
+.restaurant .choix h4, .restaurant .choix p {
+  padding-left: 1.2rem;
+}
+
+.restaurant .choix h4 {
+  margin-bottom: 0.2rem;
+}
+
+.restaurant h2 {
+  display: block;
+  width: 100%;
+  padding-left: 10%;
+  margin-bottom: 2rem;
+}
+
+.choix .photo .photo-choix {
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: bottom;
+  width: 100%;
+  height: 17rem;
+  margin-bottom: 1.5rem;
+}
+
+.choix .nouveau {
+  background-color: #99E2D0;
+  width: 8rem;
+  height: 2.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  position: absolute;
+  right: 5%;
+  top: 7%;
+  color: #297c60;
+  border-radius: 5px;
+}
+
+.choix .heart-icon .icon {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  right: 5%;
+  bottom: 9%;
+}
+
+@media screen and (min-width: 660px) {
+  .fonctionnement {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    text-align: center;
+  }
+  .fonctionnement .action {
+    width: 40rem;
+    text-align: center;
+  }
+  .fonctionnement h2 {
+    padding: 0;
+    font-family: 'Shrikhand', cursive;
+    font-weight: 400;
+    font-size: 2.6rem;
+  }
+  .restaurant {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .restaurant .choix {
+    width: 45%;
+    margin-bottom: 5rem;
+  }
+  .restaurant .choix .photo-choix {
+    height: 25rem;
+  }
+  .restaurant h2 {
+    text-align: center;
+    padding: 5rem 0rem;
+    font-family: 'Shrikhand', cursive;
+    font-weight: 400;
+    font-size: 2.6rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 70%;
+  }
+  .fonctionnement {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    text-align: center;
+  }
+  .fonctionnement .action {
+    width: 70rem;
+    text-align: center;
+  }
+  .fonctionnement h2 {
+    padding: 0;
+  }
+  .restaurant {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .restaurant .choix {
+    width: 45%;
+    margin-bottom: 5rem;
+  }
+  .restaurant .choix .photo-choix {
+    height: 35rem;
+  }
+  .restaurant h2 {
+    text-align: center;
     padding: 2rem 0rem;
+  }
+  .choix .heart-icon .icon {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    right: 5%;
+    bottom: 6%;
+  }
+}
+
+.footer {
+  width: 100%;
+  background: #383838;
+  padding: 2rem;
+  padding-bottom: 4rem;
+  color: white;
+}
+
+.footer .footer-logo {
+  padding: 1.5rem 0rem;
+}
+
+.footer .footer-logo img {
+  height: 3rem;
+}
+
+.footer p {
+  margin-bottom: 0.5rem;
+}
+
+.suggest {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.suggest #suggest-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 1rem;
+}
+
+.partner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.partner #partner-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 1rem;
+}
+
+@media screen and (min-width: 500px) {
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1070px) {
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer .footer-logo {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .footer .suggest {
+    width: 48%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    text-align: center;
+    margin-right: 2rem;
+  }
+  .footer .partner {
+    margin-left: 2rem;
+    width: 48%;
+    text-align: center;
+  }
+  .footer #mentions, .footer #contact {
+    padding: 2rem 2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
