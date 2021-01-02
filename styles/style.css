@@ -265,17 +265,22 @@ p {
   margin-bottom: 0.2rem;
 }
 
+.restaurant .choix a {
+  text-decoration: none;
+  color: black;
+}
+
 .restaurant h2 {
   display: block;
   width: 100%;
   padding-left: 10%;
   margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .choix .photo .photo-choix {
   -o-object-fit: cover;
      object-fit: cover;
-  position: bottom;
   width: 100%;
   height: 17rem;
   margin-bottom: 1.5rem;
@@ -312,28 +317,89 @@ p {
   bottom: 9%;
 }
 
-.choix .heart-icon .icon:hover {
-  -webkit-animation: heart 2s ease;
-          animation: heart 2s ease;
+.choix .heart-icon .gradient {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  right: 5%;
+  bottom: 9%;
+  opacity: 0;
 }
 
-@-webkit-keyframes heart {
+.choix .heart-icon .gradient:hover {
+  -webkit-animation: gradient 0.5s ease-in-out forwards;
+          animation: gradient 0.5s ease-in-out forwards;
+}
+
+@-webkit-keyframes gradient {
   0% {
-    background-color: white;
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  30% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.9;
   }
   100% {
-    background: -webkit-gradient(linear, left top, left bottom, from(white), to(#9356DC));
-    background: linear-gradient(white, #9356DC);
+    opacity: 1;
   }
 }
 
-@keyframes heart {
+@keyframes gradient {
   0% {
-    background-color: white;
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  30% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.9;
   }
   100% {
-    background: -webkit-gradient(linear, left top, left bottom, from(white), to(#9356DC));
-    background: linear-gradient(white, #9356DC);
+    opacity: 1;
   }
 }
 
@@ -368,6 +434,7 @@ p {
     font-size: 2.6rem;
   }
   .restaurant {
+    padding-top: 0rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -455,6 +522,11 @@ p {
   .choix .heart-icon .icon {
     width: 2rem;
     height: 2rem;
+    position: absolute;
+    right: 5%;
+    bottom: 6%;
+  }
+  .choix .heart-icon .gradient {
     position: absolute;
     right: 5%;
     bottom: 6%;
@@ -593,22 +665,6 @@ p {
   left: 5%;
 }
 
-/*PRESENTATION RESTAURANT */
-.restaurant {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0;
-  margin: 0;
-}
-
-#photo-restaurant {
-  width: 100%;
-  height: 30rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 /**MENU**/
 .menu {
   display: -webkit-box;
@@ -640,21 +696,32 @@ p {
 }
 
 .menu-head {
+  height: 30rem;
+  background: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  position: relative;
-  padding: 2rem;
-  margin-bottom: 4rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .menu-head h1 {
   font-family: "Shrikhand", cursive;
   font-weight: 400;
-  padding-left: 0;
+  padding-left: 2.2rem;
+  padding-top: 2.5rem;
+  background: white;
+  height: 20%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .menu-head .heart-icon .icon {
@@ -663,6 +730,20 @@ p {
   position: absolute;
   top: 38%;
   right: 2rem;
+}
+
+.menu-head .heart-icon .gradient {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 38%;
+  right: 2rem;
+  opacity: 0;
+}
+
+.menu-head .heart-icon .gradient:hover {
+  -webkit-animation: gradient 0.5s ease-in-out forwards;
+          animation: gradient 0.5s ease-in-out forwards;
 }
 
 /*ENTREES - PLATS -DESSERTS*/
@@ -915,16 +996,51 @@ button {
   }
 }
 
+@keyframes gradient {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  30% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /*MEDIA QUERIES*/
 @media screen and (min-width: 500px) {
   .menu-head {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 2rem;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     margin-bottom: 4rem;
     position: relative;
   }
@@ -932,13 +1048,25 @@ button {
     font-family: "Shrikhand", cursive;
     font-weight: 400;
     padding-left: 0;
+    text-align: center;
   }
   .menu-head .heart-icon .icon {
     width: 2rem;
     height: 2rem;
     position: absolute;
-    top: 80%;
+    top: 100%;
     right: 49%;
+  }
+  .menu-head .heart-icon .gradient {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 100%;
+    right: 49%;
+  }
+  .menu-head .heart-icon .gradient:hover {
+    -webkit-animation: gradient 0.5s ease-in-out forwards;
+            animation: gradient 0.5s ease-in-out forwards;
   }
 }
 
