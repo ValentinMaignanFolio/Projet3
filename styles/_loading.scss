@@ -1,0 +1,93 @@
+.container{
+    position:relative;
+}
+.loading{
+    position:absolute;
+    margin:0px;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    left:0%;
+    background: linear-gradient(90deg,#FF79DA, #9356DC);
+    display: flex;
+    justify-content: center;
+    animation: sortie 3s ease-in-out 4s forwards;
+    opacity: 1;
+    z-index:2;
+    h1{
+        font-family: 'Shrikhand', cursive;
+        font-size:6rem;
+    }
+}
+
+
+.loading-circle{
+    animation: rotate 3s ease-in-out alternate;
+    width:25rem;
+    height:25rem;
+    border:5px white solid;
+    border-top:6px #41d8b2 solid;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:20rem;
+    margin-bottom:10rem;
+    #burger{
+        object-fit: cover;
+        width:12rem;
+    }
+}
+
+
+.logo-marque{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.point{
+    width:2rem;
+    height:2rem;
+    background: white;
+    border-radius: 50%;
+}
+
+
+
+.home{
+    position:absolute;
+    margin:0px;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
+@keyframes rotate{
+    to{
+        transform: rotate(720deg);
+    }
+}
+
+@keyframes disparition{
+    from{
+        margin-left:100%;
+    }
+    to{
+        margin-left:100%;
+    }
+}
+
+@keyframes sortie{
+    from{
+        transform:translateX(0%);
+    }
+    
+    to{
+        transform:translateX(500%);
+    }
+}

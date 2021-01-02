@@ -32,7 +32,7 @@
     }
 }
 
-.menu-head{
+.menu-head1{
     height:30rem;
     background: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
     background-size:cover;
@@ -52,6 +52,70 @@
         border-top-right-radius: 20px;
     }
 }
+
+.menu-head2{
+    height:30rem;
+    background: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat ;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    h1{
+        font-family: $special;
+        font-weight:400;
+        padding-left:2.2rem;
+        padding-top:2.5rem;
+        background:white;
+        height:20%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+}
+
+.menu-head3{
+    height:30rem;
+    background: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat ;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    h1{
+        font-family: $special;
+        font-weight:400;
+        padding-left:2.2rem;
+        padding-top:2.5rem;
+        background:white;
+        height:20%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+}
+
+.menu-head4{
+    height:30rem;
+    background: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat ;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    h1{
+        font-family: $special;
+        font-weight:400;
+        padding-left:2.2rem;
+        padding-top:2.5rem;
+        background:white;
+        height:20%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+}
+
 
 .menu-head .heart-icon{
     .icon{
@@ -193,7 +257,12 @@ button{
     box-shadow: 2px 3px 3px rgb(173, 168, 168);
     text-align:center;
 }
-
+button:hover{
+    box-shadow: 0px 3px 2px 3px rgb(173, 168, 168);
+    background: linear-gradient(#f88cda, #a775e4);
+    font-size:1.4rem;
+    transition: all .4s;
+}
 /* KEYFRAMES */
 
 @keyframes rotate{
@@ -272,7 +341,46 @@ button{
 /*MEDIA QUERIES*/
 
 @media screen and (min-width: 500px){
-    .menu-head{
+    .menu-head1{
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom:4rem;
+        position:relative;
+        h1{
+            font-family: $special;
+            font-weight:400;
+            padding-left:0;
+            text-align: center;
+            
+        }
+    }
+    .menu-head2{
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom:4rem;
+        position:relative;
+        h1{
+            font-family: $special;
+            font-weight:400;
+            padding-left:0;
+            text-align: center;
+            
+        }
+    }
+    .menu-head3{
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom:4rem;
+        position:relative;
+        h1{
+            font-family: $special;
+            font-weight:400;
+            padding-left:0;
+            text-align: center;
+            
+        }
+    }
+    .menu-head4{
         display: flex;
         justify-content: flex-end;
         margin-bottom:4rem;
@@ -326,7 +434,7 @@ button{
     .suggestion{
         display: flex;
         flex-direction:row;
-        align-items: center;
+        align-items: flex-start;
     }
     .main-courses, .starters, .deserts{
         margin:4rem;
