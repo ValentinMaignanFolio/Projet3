@@ -953,8 +953,8 @@ button:hover {
   position: absolute;
   right: -8rem;
   top: 0rem;
-  -webkit-transition: all .4s;
-  transition: all .4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .validate img {
@@ -1319,6 +1319,7 @@ button:hover {
           animation: sortie 3s ease-in-out 4s forwards;
   opacity: 1;
   z-index: 2;
+  padding-top: 10%;
 }
 
 .loading h1 {
@@ -1343,8 +1344,7 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 20rem;
-  margin-bottom: 10rem;
+  margin-bottom: 4%;
 }
 
 .loading-circle #burger {
@@ -1431,6 +1431,12 @@ button:hover {
   to {
     -webkit-transform: translateX(500%);
             transform: translateX(500%);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .loading {
+    padding-top: 25%;
   }
 }
 /*# sourceMappingURL=style.css.map */
